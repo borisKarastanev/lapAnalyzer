@@ -10,7 +10,8 @@ export class TracksService {
       {
         name: 'Sofia Karting Ring',
         length: 750,
-        trackLocation: {
+        location: {
+          city: 'Sofia', 
           lon: '46.62',
           lat: '32.45'
         }
@@ -18,7 +19,8 @@ export class TracksService {
       {
         name: 'Lauta',
         length: 922,
-        trackLocation: {
+        location: {
+          city: 'Plovdiv',
           lon: '46.62',
           lat: '32.45'
         }
