@@ -1,23 +1,24 @@
-<section id="your-tracks">
-  <h3>
-    {{ title }}
-  </h3>
-  <div *ngFor="let track of tracks">
-    <ul>
-      <li>
-        {{track.name}}
-      </li>
-    </ul>
-    <aside>
-      <div class="track-details">
-        <address>
-          <span>Track Location: {{track.location.city}}</span>
-          <div class="location-map">
-            <span>lon: {{track.location.lon}}</span>
-            <span>lat: {{track.location.lat}}</span>
-          </div>
-        </address>
-      </div>
-    </aside>
+<section id="your-tracks" class="card">
+    <h3 class="card-header">
+      {{ title }}
+    </h3>
+
+  <div class="card-body">
+    <div class="table-responsive">
+      <table class="table" *ngIf="tracks && tracks.length">
+        <thead>
+          <tr>
+            <th>Track Name</th>
+            <th>Track Location</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let track of tracks">
+            <td>{{track.name}}</td>
+            <td><span>lon: {{track.location.lon}}</span><span> lat: {{track.location.lat}}</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </section>
