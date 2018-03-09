@@ -9,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 export class TracksComponent implements OnInit {
   private tracks: Array<any>;
   private title: String = 'Tracks Near Your Location';
-  
+  private logoWidth: number = 100;
+  private logoMargin: number = 2;
+
   constructor(private tracksService: TracksService) {
-    this.tracks = tracksService.getTracks()
+    this.tracks = tracksService.getTracks();
   }
 
   ngOnInit() {

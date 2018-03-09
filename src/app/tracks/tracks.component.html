@@ -8,12 +8,16 @@
       <table class="table" *ngIf="tracks && tracks.length">
         <thead>
           <tr>
+            <th></th>
             <th>Track Name</th>
             <th>Track Location</th>
           </tr>
         </thead>
         <tbody>
           <tr *ngFor="let track of tracks">
+            <td>
+              <img [src]="track.logo" [title]="track.name" [style.width.px]="logoWidth" [style.margin.px]="logoMargin">
+            </td>
             <td>{{track.name}}</td>
             <td><span>lon: {{track.location.lon}}</span><span> lat: {{track.location.lat}}</span></td>
           </tr>
