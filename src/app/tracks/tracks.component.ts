@@ -11,6 +11,7 @@ export class TracksComponent implements OnInit {
   private title: String = 'Tracks Near Your Location';
   private logoWidth: number = 100;
   private logoMargin: number = 2;
+  private listFilter: string = 'cart';
 
   constructor(private tracksService: TracksService) {
     this.tracks = tracksService.getTracks();

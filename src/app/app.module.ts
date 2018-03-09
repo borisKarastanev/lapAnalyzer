@@ -1,10 +1,10 @@
-import { TracksService } from './tracks/tracks.service';
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {TracksService} from './tracks/tracks.service';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-
-import { AppComponent } from './app.component';
-import { TracksComponent } from './tracks/tracks.component';
+import {FormsModule} from '@angular/forms';
+import {AppComponent} from './app.component';
+import {TracksComponent} from './tracks/tracks.component';
 
 
 @NgModule({
@@ -13,11 +13,13 @@ import { TracksComponent } from './tracks/tracks.component';
     TracksComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [
     TracksService
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
